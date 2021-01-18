@@ -5,7 +5,7 @@ const token = process.env.token
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "현재근찌봇 고장남 복구중.." }, status: "online" })
+  client.user.setPresence({ activity: { name: "현재근찌봇 복구중.." }, status: "online" })
 })
 
 client.on("message", (message) => {
@@ -84,13 +84,13 @@ client.on("message", (message) => {
   else if (message.content == "!도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
-      { name: "!도움말", desc: "사용가능" },
+      { name: "!도움말", desc: "근찌봇 명령어를 알려줘요" },
       { name: "ping", desc: "사용가능" },
       { name: "!근찌정보", desc: "근찌님 정보를 알려줘요" },
       { name: "!현재시간", desc: "현재시간은 알려줘요" },
       { name: "!방송규칙", desc: "근찌님 방송규칙을 알려줘요" },
+      { name: "!시참규칙", desc: "시참 규칙을 알려줘요" },
       { name: "!청소", desc: "채팅청소 님들 방청소 그런거 아님ㅋㅋ" },
-      { name: "!", desc: "서비스준비중" },
       { name: "!", desc: "서비스준비중" },
     ]
     let commandStr = ""
