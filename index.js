@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const intent_list = new Discord.Intents(["GUILD_MEMBERS", "GUILD_MESSAGES", "GUILDS", "GUILD_INVITES"])
 const client = new Discord.Client({ ws: { intents: intent_list } })
-const token = "Nzg3MjMyNzUwMTA1MTMzMDk2.X9R9oQ.-Y8O_UujCYPROl8rviybdw24-LA"//process.env.token
+const token = process.env.token
 
 client.on("ready", () => {
   console.log("켰다.")
