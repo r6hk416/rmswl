@@ -45,6 +45,7 @@ client.on("message", (message) => {
   }
 
   let blacklisted = ["시발","시1발","시이발","병신","병1신","씨발","씨1발","씨이발","느금","느금마","느1금","느그음마","좇","좆","조옷같네","병진","병1진","닥쳐","닥1쳐"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+  let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
 
       let foundInText = false;
       for (var i in blacklisted) { 
@@ -56,7 +57,7 @@ client.on("message", (message) => {
           const user = message.author.id;
           const embed = new Discord.MessageEmbed()
           .setColor('#FF0000')
-          .setDescription(`<@${user}> 그런말쓰지마! \n사용한 욕설 : \`${message.content}\``); //욕설 하면 보내는 말 (바꿔도댐)
+          .setDescription(`<@${user}> 그런말쓰지마! \n사용한 욕설 : \`${message.content}\` \'${img}\``); //욕설 하면 보내는 말 (바꿔도댐)
           message.channel.send(embed)
           message.delete()
   }
