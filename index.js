@@ -23,7 +23,7 @@ client.on("message", (message) => {
       .setURL("http://www.naver.com")
       .setAuthor("근찌", img, "http://www.naver.com")
       .setThumbnail(img)
-      .addField("팔로워", "팔로워 175명")
+      .addField("팔로워", "팔로워 176명")
       .addField("나이", "성인", true)
       .addField("생일", "11월22일", true)
       .addField("좋아하는음식", "떡볶이", true)
