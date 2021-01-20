@@ -44,6 +44,23 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
+  let blacklisted = ["욕설"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+
+      let foundInText = false;
+      for (var i in blacklisted) { 
+        if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true
+      }
+      
+
+      if (foundInText) {
+          const user = message.author.id;
+          const embed = new Discord.MessageEmbed()
+          .setColor('#FF0000')
+          .setDescription(`<@${user}> 욕하지마라 \n사용한 욕설 : \`${message.content}\``); //욕설 하면 보내는 말 (바꿔도댐)
+          message.channel.send(embed)
+          message.delete()
+  }
+
   if (message.content == "!방송규칙") {
     let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
     let embed = new Discord.MessageEmbed()
