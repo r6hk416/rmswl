@@ -57,7 +57,8 @@ client.on("message", (message) => {
           const user = message.author.id;
           const embed = new Discord.MessageEmbed()
           .setColor('#FF0000')
-          .setDescription(`<@${user}> 그런말쓰지마! \n사용한 욕설 : \`${message.content}\` \'${img}\``); //욕설 하면 보내는 말 (바꿔도댐)
+          .setThumbnail(img)
+          .setDescription(`<@${user}> 그런말쓰지마! \n사용한 욕설 : \`${message.content}\``); //욕설 하면 보내는 말 (바꿔도댐)
           message.channel.send(embed)
           message.delete()
   }
