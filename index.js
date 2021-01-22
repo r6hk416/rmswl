@@ -64,7 +64,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  let blacklisted = ["시발","욕설테스트","시1발","시이발","병신","병1신","씨발","씨1발","씨이발","느금","느금마","느1금","느그음마","좇","좆","조옷같네","병진","병1진","닥쳐","닥1쳐"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+  let blacklisted = ["시발","욕설테스트","시1발","시이발","병신","병1신","씨발","씨1발","씨이발","느금","느금마","느1금","느그음마","좇","좇까","좇1까","좆","좆까","좆1까","조옷같네","병진","병1진","닥쳐","닥1쳐","니거",""] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
   let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
   
       let foundInText = false;
@@ -82,6 +82,23 @@ client.on("message", (message) => {
           message.channel.send(embed)
           message.delete()
   }
+
+  let yee = ["근찌바보"]
+
+  let yeetext = false;
+      for (var i in yee) {
+        if (message.content.toLowerCase().includes(yee[i].toLowerCase())) yeetext = true
+  }
+
+
+      if (yeetext) {
+        const user = message.author.id;
+        const embed = new Discord.MessageEmbed()
+        .setAuthor("ff8e8e")
+        .setDescription(`<@${user}> 근찌놀리지마! \n사용한 말 : \`${message.content}\``);
+        message.channel.send(embed)
+        message.delete()
+      }
 
   if (message.content == "!방송규칙") {
     let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
