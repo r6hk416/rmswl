@@ -83,22 +83,23 @@ client.on("message", (message) => {
           message.delete()
   }
 
-  let yee = ["근찌바보"]
-
-  let yeetext = false;
-      for (var i in yee) {
-        if (message.content.toLowerCase().includes(yee[i].toLowerCase())) yeetext = true
-  }
-
-
-      if (yeetext) {
-        const user = message.author.id;
-        const embed = new Discord.MessageEmbed()
-        .setAuthor("ff8e8e")
-        .setDescription(`<@${user}> 근찌놀리지마! \n사용한 말 : \`${message.content}\``);
-        message.channel.send(embed)
-        message.delete()
+  let blacklisted = ["근찌바보"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+  
+      let foundInText = false;
+      for (var i in blacklisted) { 
+        if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true
       }
+      
+
+      if (foundInText) {
+          const user = message.author.id;
+          const embed = new Discord.MessageEmbed()
+          .setColor('#FF0000')
+          .setThumbnail(img)
+          .setDescription(`<@${user}> 근찌놀리지마! \n사용한 말 : \`${message.content}\``); //욕설 하면 보내는 말 (바꿔도댐)
+          message.channel.send(embed)
+          message.delete()
+  }
 
   if (message.content == "!방송규칙") {
     let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
