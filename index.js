@@ -40,7 +40,6 @@ client.on("message", (message) => {
     .setTitle("현재시간")
     .setURL("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%ED%98%84%EC%9E%AC%EC%8B%9C%EA%B0%84")
     .setTimestamp()
-    .setFooter("화이트해커 가 만듬")
 
     message.channel.send(embed)
   }
