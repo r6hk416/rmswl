@@ -15,6 +15,26 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
+  if (message.content == "!노래1") {
+    return message.reply("https://youtu.be/kenar8s7oRE")
+  }
+
+  if (message.content == "!노래2") {
+    return message.reply("https://youtu.be/QxmGiqqYrn8?list=PL014qIk11wJqJuCgXoM4I63ITY9Sqhe7k")
+  }
+
+  if (message.content == "!노래3") {
+    return message.reply("https://youtu.be/r8jbD8TzQLw?list=PL014qIk11wJqJuCgXoM4I63ITY9Sqhe7k")
+  }
+
+  if (message.content == "!노래4") {
+    return message.reply("https://youtu.be/2VY2NLE2Bn0?list=RDMM")
+  }
+
+  if (message.content == "!노래5") {
+    return message.reply("https://youtu.be/ewCLsbNczjo?list=RDMM")
+  }
+
   if (message.content == "!근찌정보") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
@@ -110,7 +130,8 @@ client.on("message", (message) => {
       { name: "!방송규칙", desc: "근찌님 방송규칙을 알려줘요" },
       { name: "!시참규칙", desc: "시참 규칙을 알려줘요" },
       { name: "!청소", desc: "채팅청소 님들 방청소 그런거 아님ㅋㅋ" },
-      { name: "!", desc: "서비스준비중" },
+      { name: "욕설방지 기능(?)", desc: "현재 정상 작동중..욕하시마세요" },
+      { name: "!노래1~5", desc: "제작자가 자주 듣는 노래를 보여줍니다."},
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
