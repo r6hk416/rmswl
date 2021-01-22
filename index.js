@@ -35,7 +35,7 @@ client.on("message", (message) => {
   } 
   
   if (message.content == "!현재시간") {
-    let embed = new Discord.MessageEmbed
+    let embed = new Discord.MessageEmbed()
     .setTitle("현재시간")
     .setURL("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%ED%98%84%EC%9E%AC%EC%8B%9C%EA%B0%84")
     .addField("자세한 시간은 여기로","https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%ED%98%84%EC%9E%AC%EC%8B%9C%EA%B0%84")
