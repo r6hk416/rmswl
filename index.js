@@ -64,6 +64,12 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
+  if (message.content == "!근찌봇테스트") {
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("ff8e8e")
+    .setTitle
+  }
+
   let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐", "니거",] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
   let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
   
@@ -81,16 +87,6 @@ client.on("message", (message) => {
           .setDescription(`<@${user}> 그런말쓰지마! \n사용한 욕설 : \`${message.content}\``); //욕설 하면 보내는 말 (바꿔도댐)
           message.channel.send(embed)
           message.delete()
-  }
-
-  let blck = ["근찌바보"];
-  if (blck) {
-    let embed = new Discord.MessageEmbed()
-
-    embed.setColor("ff8e8e")
-    .setTitle("근찌놀리지마!")
-    .addField("근찌님놀리지마!","\n근찌님은 나만놀릴거라고!")
-    message.channel.send(embed)
   }
 
   if (message.content == "!방송규칙") {
