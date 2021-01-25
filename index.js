@@ -109,14 +109,6 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.content == "!테스트") {
-    let img = "https://cdn.discordapp.com/attachments/756326812841279572/802751023302049832/giphy.gif"
-    let embed = new Discord.MessageEmbed()
-    
-    embed.setThumbnail(img)
-    message.channel.send(embed)
-  }
-
   if (message.content == "!시참규칙") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
