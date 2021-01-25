@@ -25,21 +25,21 @@ client.on("message", (message) => {
     .setTitle("탕수육게임")
     .setURL("https://namu.wiki/w/%ED%83%95%EC%88%98%EC%9C%A1%20%EA%B2%8C%EC%9E%84")
     .setThumbnail(img)
-    .addField("정상", "탕 - > 수 - > 육 ->")
-    .addField("비정상", "탕 - > 육 - > 수 or 수 - > 탕 - > 육 ")
+    .addField("정상", "!탕 - > !수 - > !육 ->")
+    .addField("비정상", "!탕 - > !육 - > !수 or !수 - > !탕 - > !육 ")
     .addField("주의점", "\n현재 '탕수육'게임은 아주 간단한 코드로 만들어졌으며 \n빠르게 채팅을 치면 근찌봇이 고장날수도있습니다 그리고 계속 하시면 도배가 될수도있습니다. 적당히!")
     message.channel.send(embed)
   }
-  if (message.content == "탕") {
-    return message.reply("수")
+  if (message.content == "!탕") {
+    return message.reply("!수")
   }
 
-  if (message.content == "육") {
-    return message.reply("탕")
+  if (message.content == "!육") {
+    return message.reply("!탕")
   }
 
-  if (message.content == "수") {
-    return message.reply("육")
+  if (message.content == "!수") {
+    return message.reply("!육")
   }
 }
 
