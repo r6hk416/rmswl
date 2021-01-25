@@ -5,7 +5,7 @@ const token = process.env.token
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "!도움말을 쳐보세요" }, status: "online" })
+  client.user.setPresence({ activity: { name: "'!도움말을' 쳐보세요" }, status: "online" })
 })
 
 client.on("message", (message) => {
@@ -13,6 +13,18 @@ client.on("message", (message) => {
 
   if (message.content == "ping") {
     return message.reply("pong")
+  }
+
+  if (message.content == "탕") {
+    return message.reply("수")
+  }
+
+  if (message.content == "육") {
+    return message.reply("탕")
+  }
+
+  if (message.content == "수") {
+    return message.reply("육")
   }
 
   if (message.content == "!노래1") {
@@ -62,12 +74,6 @@ client.on("message", (message) => {
     .setTimestamp()
 
     message.channel.send(embed)
-  }
-
-  if (message.content == "!근찌봇테스트") {
-    let embed = new Discord.MessageEmbed()
-    embed.setColor("ff8e8e")
-    .setTitle
   }
 
   let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐", "니거",] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
