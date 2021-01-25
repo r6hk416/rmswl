@@ -15,6 +15,20 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
+  if (message.content == "음") {
+    return message.reply("움")
+  }
+{
+  if (message.content == "!탕수육게임") {
+    let img = "https://th.bing.com/th/id/OIP.6kCfsexRlgnlXR9aZA-augHaEv?w=245&h=180&c=7&o=5&pid=1.7"
+    let embed = new Discord.MessageEmbed()
+    .setTitle("탕수육게임")
+    .setURL("https://namu.wiki/w/%ED%83%95%EC%88%98%EC%9C%A1%20%EA%B2%8C%EC%9E%84")
+    .setThumbnail(img)
+    .addField("정상", "탕 - > 수 - > 육 ->")
+    .addField("비정상", "탕 - > 육 - > 수 or 수 - > 탕 - > 육 ")
+    .addField("주의점", "\n현재 '탕수육'게임은 아주 간단한 코드로 만들어졌으며 \n빠르게 채팅을 치면 근찌봇이 고장날수도있습니다 그리고 계속 하시면 도배가 될수도있습니다. 적당히!")
+  }
   if (message.content == "탕") {
     return message.reply("수")
   }
@@ -26,6 +40,7 @@ client.on("message", (message) => {
   if (message.content == "수") {
     return message.reply("육")
   }
+}
 
   if (message.content == "!노래1") {
     return message.reply("https://youtu.be/kenar8s7oRE")
