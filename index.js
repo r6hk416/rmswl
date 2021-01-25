@@ -5,7 +5,7 @@ const token = process.env.token
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "현재근찌봇 복구중.." }, status: "online" })
+  client.user.setPresence({ activity: { name: "!도움말을 쳐보세요" }, status: "online" })
 })
 
 client.on("message", (message) => {
@@ -106,6 +106,14 @@ client.on("message", (message) => {
     .addField("규칙:7", "언팔은 NO")
     .addField("규칙:8", "방송과 관련 없는 얘기는 삼가해주세요")
 
+    message.channel.send(embed)
+  }
+
+  if (message.content == "!테스트") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/802751023302049832/giphy.gif"
+    let embed = new Discord.MessageEmbed()
+    
+    embed.setThumbnail(img)
     message.channel.send(embed)
   }
 
