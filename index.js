@@ -170,6 +170,7 @@ client.on("message", (message) => {
       { name: "!청소", desc: "채팅청소 님들 방청소 그런거 아님ㅋㅋ" },
       { name: "욕설방지 기능(?)", desc: "현재 정상 작동중..욕하시마세요" },
       { name: "!노래1~5", desc: "제작자가 자주 듣는 노래를 보여줍니다."},
+      { name: "!근찌봇테스트서버", desc: "근찌봇의 새로운 기능을 테스트하기위한 서버입니다."},
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
