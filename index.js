@@ -92,7 +92,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.content == "!근찌봇테스트서버") {
+  if (message.content == "!봇테스트서버") {
     let embed = new Discord.MessageEmbed()
     .setTitle("근찌봇테스트서버")
     .addField("서버링크", "https://discord.gg/U9GcMXCMyZ")
@@ -164,22 +164,22 @@ client.on("message", (message) => {
       { name: "!도움말", desc: "근찌봇 명령어를 알려줘요" },
       { name: "ping", desc: "사용가능" },
       { name: "!근찌정보", desc: "근찌님 정보를 알려줘요" },
-      { name: "!현재시간", desc: "현재시간은 알려줘요" },
+      { name: "!현재시간", desc: "현재시간을 알려줘요" },
       { name: "!방송규칙", desc: "근찌님 방송규칙을 알려줘요" },
       { name: "!시참규칙", desc: "시참 규칙을 알려줘요" },
       { name: "!청소", desc: "채팅청소 님들 방청소 그런거 아님ㅋㅋ" },
       { name: "욕설방지 기능(?)", desc: "현재 정상 작동중..욕하시마세요" },
       { name: "!노래1~5", desc: "제작자가 자주 듣는 노래를 보여줍니다."},
-      { name: "!근찌봇테스트서버", desc: "근찌봇의 새로운 기능을 테스트하기위한 서버입니다."},
+      { name: "!봇테스트서버", desc: "근찌봇의 새로운 기능을 테스트하기위한 서버입니다."},
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("근찌 BOT", helpImg).setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
     })
 
-    embed.addField("Commands: ", commandStr)
+    embed.addField("커맨드: ", commandStr)
 
     message.channel.send(embed)
   } else if (message.content == "!초대코드2") {
