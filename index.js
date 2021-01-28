@@ -71,7 +71,7 @@ client.on("message", (message) => {
       .setURL("http://www.naver.com")
       .setAuthor("근찌", img, "http://www.naver.com")
       .setThumbnail(img)
-      .addField("팔로워", "팔로워 184명")
+      .addField("팔로워", "팔로워 189명")
       .addField("나이", "성인", true)
       .addField("생일", "11월22일", true)
       .addField("좋아하는음식", "떡볶이", true)
@@ -92,7 +92,17 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐", "니거",] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+  if (message.content == "!근찌봇테스트서버") {
+    let embed = new Discord.MessageEmbed()
+    .setTitle("근찌봇테스트서버")
+    .addField("서버링크", "https://discord.gg/U9GcMXCMyZ")
+    .addField("근찌봇테스트서버", "근찌봇의 새로운기능을 이 서버에서 테스트하시고 문제가 있으면 개발자에게 말해주세요\n 바로 문제를 수정하고 더 좋은 기능을 넣을 수 있습니다\n물론 다른 근찌봇 기능을 원하시면 테스트서버에서 말하시면 제가 검토후 추가하도록 하겠습니다.")
+    .setFooter("개발자:화이트해커")
+
+    message.channel.send(embed)
+  }
+
+  let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐", "니거","ㅅㅂ","ㅅ1ㅂ","ㅆㅂ","ㅈㄲ","ㅈ1ㄲ",""] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
   let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
   
       let foundInText = false;
@@ -149,7 +159,7 @@ client.on("message", (message) => {
   }
   
   else if (message.content == "!도움말") {
-    let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
+    let helpImg = "https://static-cdn.jtvnw.net/jtv_user_pictures/3ab02819-794f-436f-aed6-3f6d49062283-profile_image-70x70.png"
     let commandList = [
       { name: "!도움말", desc: "근찌봇 명령어를 알려줘요" },
       { name: "ping", desc: "사용가능" },
