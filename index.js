@@ -141,17 +141,19 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.contentw == "403") {
+  if (message.content == "403") {
     let embed = new Discord.MessageEmbed()
      
-    .setTitle("1")
+    .addField("")
+    
+
+    message.channel.send(embed)
+    /*.setTitle("1")
     .setURL("https://youtu.be/KVxxxSFtmkM")
     .setTitle("2")
     .setURL("https://youtu.be/bXv38miQftk")
     .setTitle("3")
-    .setURL("https://youtu.be/6IDpKVF6LwQ")
-
-    message.channel.send(embed)
+    .setURL("https://youtu.be/6IDpKVF6LwQ")*/
   }
 
   if (message.content == "!시참규칙") {
