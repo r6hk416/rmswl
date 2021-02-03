@@ -71,7 +71,7 @@ client.on("message", (message) => {
       .setURL("http://www.naver.com")
       .setAuthor("근찌", img, "http://www.naver.com")
       .setThumbnail(img)
-      .addField("팔로워", "팔로워 189명")
+      .addField("팔로워", "팔로워 198명")
       .addField("나이", "성인", true)
       .addField("생일", "11월22일", true)
       .addField("좋아하는음식", "떡볶이", true)
@@ -171,6 +171,12 @@ client.on("message", (message) => {
     .addField("규칙:5", "불편한 행동, 말 자제해주세요")
 
     message.channel.send(embed)
+  }
+
+  if (message.content == "!겜정보") {
+    let embed = new Discord.MessageEmbed()
+
+    .setTitle("겜정보")
   }
   
   else if (message.content == "!도움말") {
