@@ -68,19 +68,69 @@ client.on("message", (message) => {
     let embed = new Discord.MessageEmbed()
       embed.setColor("ff8e8e")
       .setTitle("근찌정보")
-      .setURL("http://www.naver.com")
-      .setAuthor("근찌", img, "http://www.naver.com")
+      .setURL("https://www.twitch.tv/geunzzi_")
+      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .addField("팔로워", "팔로워 206명")
-      .addField("나이", "성인", true)
-      .addField("생일", "11월22일", true)
-      .addField("좋아하는음식", "떡볶이", true)
-      .addField("기타정보", "게임은 좋아하지만 재능이\n0개 국어 입니다 한국말로 번역해주세요\n기분에 따라 달라지는 목소리 톤\n순두부 멘탈 (멘탈 나가면 방종..)")
+      .addField("나이가 궁금하시면", "'!나이'을/를 쳐주세요")
+      .addField("팔로워가 궁금하시면", "'!팔로워'을/를 쳐주세요")
+      .addField("생일이 궁금하시면", "'!생일'을/를 쳐주세요")
+      .addField("좋아하는 음식이 궁금하시면", "'!음식'을/를 쳐주세요")
+      .addField("다른 정보를 알고싶다면", "'!기타'을/를 쳐주세요")
       .setTimestamp()
       .setFooter("화이트해커 가 만듬", img)
 
     message.channel.send(embed)
-  } 
+  }
+
+  if (message.content == "!나이") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("나이 을/를 선택하셨습니다.")
+      .addField("'성인'입니다")
+      .setTimestamp()
+      message.channel.send(embed)
+  }
+
+  if (message.content == "!팔로워") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("팔로워 을/를 선택하셨습니다.")
+      .addField("현재 팔로워는", "'220명'입니다")
+      .setTimestamp()
+      message.channel.send(embed)
+  }
+
+  if (message.content == "!생일") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("생일 을/를 선택하셨습니다.")
+      .addField("근찌님 생일은", "'11월22일'입니다")
+      .setTimestamp()
+      message.channel.send(embed)
+  }
+
+  if (message.content == "!음식") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("음식 을/를 선택하셨습니다.")
+      .addField("근찌님이 좋아하는 음식은", "'떡볶이'입니다")
+      .setTimestamp()
+      message.channel.send(embed)
+  }
+
+  if (message.content == "!기타") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("기타 을/를 선택하셨습니다.")
+      .addField("기타정보", "게임은 좋아하지만 재능이\n0개 국어 입니다 한국말로 번역해주세요\n기분에 따라 달라지는 목소리 톤\n순두부 멘탈 (멘탈 나가면 방종..)")
+      .setTimestamp()
+      message.channel.send(embed)
+  }
   
   if (message.content == "!현재시간") {
     let embed = new Discord.MessageEmbed()
