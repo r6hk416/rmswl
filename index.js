@@ -211,21 +211,6 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.content == "403") {
-    let embed = new Discord.MessageEmbed()
-     
-    .addField("")
-    
-
-    message.channel.send(embed)
-    /*.setTitle("1")
-    .setURL("https://youtu.be/KVxxxSFtmkM")
-    .setTitle("2")
-    .setURL("https://youtu.be/bXv38miQftk")
-    .setTitle("3")
-    .setURL("https://youtu.be/6IDpKVF6LwQ")*/
-  }
-
   if (message.content == "!시참규칙") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
