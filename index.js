@@ -81,7 +81,6 @@ client.on("message", (message) => {
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
       .addField("나이가 궁금하시면", "'!나이'을/를 쳐주세요")
-      .addField("근찌님의 키를 알고싶다면", "'!키'을/를 쳐주세요")
       .addField("팔로워가 궁금하시면", "'!팔로워'을/를 쳐주세요")
       .addField("생일이 궁금하시면", "'!생일'을/를 쳐주세요")
       .addField("좋아하는 음식이 궁금하시면", "'!음식'을/를 쳐주세요")
@@ -106,7 +105,7 @@ client.on("message", (message) => {
       message.channel.send(embed)
   }
 
-  if (message.content == "!키") {
+  if (message.content == "") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let smimg = "https://cdn.discordapp.com/attachments/804191844560142356/811132351442452510/802d583a5185a46f.PNG"
     let embed = new Discord.MessageEmbed()
@@ -130,7 +129,7 @@ client.on("message", (message) => {
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
       .addField("팔로워 을/를 선택하셨습니다.")
-      .addField("현재 팔로워는", "'220명'입니다")
+      .addField("현재 팔로워는", "'237명'입니다")
       .setTimestamp()
       message.channel.send(embed)
   }
