@@ -1,12 +1,7 @@
 const Discord = require("discord.js")
 const intent_list = new Discord.Intents(["GUILD_MEMBERS", "GUILD_MESSAGES", "GUILDS", "GUILD_INVITES"])
 const client = new Discord.Client({ ws: { intents: intent_list } })
-const token = process.argv.length == 2 ? process.env.token : "" // heroku를 사용하지 않을꺼라면 const token = "디스코드 봇 토큰" 으로 바꿔주세요.
-const welcomeChannelName = "안녕하세요" // 입장 시 환영메시지를 전송 할 채널의 이름을 입력하세요.
-const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
-const welcomeChannelComment = "어서오세요." // 입장 시 전송할 환영메시지의 내용을 입력하세요.
-const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
-const roleName = "게스트" // 입장 시 지급 할 역할의 이름을 적어주세요
+const token = process.env.token
 
 client.on("ready", () => {
   console.log("켰다.")
@@ -23,6 +18,15 @@ client.on("message", (message) => {
   if (message.content == "음") {
     return message.reply("움")
   }
+
+  if (message.content == "근모닝") {
+    return message.reply("근모닝~!")
+  }
+
+  if (message.content == "깡패다!") {
+    return message.reply("https://cdn.discordapp.com/attachments/811624609383972864/812370063981936660/a1eec8b664e8a5272e8643dcbda8ba1e.jpg")
+  }
+
 {
   if (message.content == "!탕수육게임") {
     let img = "https://th.bing.com/th/id/OIP.6kCfsexRlgnlXR9aZA-augHaEv?w=245&h=180&c=7&o=5&pid=1.7"
@@ -77,6 +81,7 @@ client.on("message", (message) => {
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
       .addField("나이가 궁금하시면", "'!나이'을/를 쳐주세요")
+      .addField("근찌님의 키를 알고싶다면", "'!키'을/를 쳐주세요")
       .addField("팔로워가 궁금하시면", "'!팔로워'을/를 쳐주세요")
       .addField("생일이 궁금하시면", "'!생일'을/를 쳐주세요")
       .addField("좋아하는 음식이 궁금하시면", "'!음식'을/를 쳐주세요")
@@ -101,6 +106,21 @@ client.on("message", (message) => {
       message.channel.send(embed)
   }
 
+  if (message.content == "!키") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let smimg = "https://cdn.discordapp.com/attachments/804191844560142356/811132351442452510/802d583a5185a46f.PNG"
+    let embed = new Discord.MessageEmbed()
+      embed.setColor("ff8e8e")
+      .setTitle("근찌정보")
+      .setURL("https://www.twitch.tv/geunzzi_")
+      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
+      .setThumbnail(img)
+      .addField("근찌님 현재 키는 바로 이문제를 풀면 알려드림", "문자 A , B, C, D , E가 하나씩 적혀 있는 5장의 카드와\n숫자 1 , 2 , 3 , 4가 하나씩 적혀 있는 4장의 카드가 있다.\n이 9장의 카드를 모두 한 번씩 사용하여 일렬로 임의로 나열할 때,\n문자 A 가 적혀 있는 카드의 바로 양옆에 각각 숫자가 적혀 있는\n카드가 놓일 확률은?")
+      .setImage(smimg)
+
+      message.channel.send(embed)
+  }
+
   if (message.content == "!팔로워") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
@@ -109,7 +129,7 @@ client.on("message", (message) => {
       .setURL("https://www.twitch.tv/geunzzi_")
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .setTitle("팔로워 을/를 선택하셨습니다.")
+      .addField("팔로워 을/를 선택하셨습니다.")
       .addField("현재 팔로워는", "'220명'입니다")
       .setTimestamp()
       message.channel.send(embed)
@@ -137,7 +157,7 @@ client.on("message", (message) => {
       .setURL("https://www.twitch.tv/geunzzi_")
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .setTitle("음식 을/를 선택하셨습니다.")
+      .addField("음식 을/를 선택하셨습니다.")
       .addField("근찌님이 좋아하는 음식은", "'떡볶이'입니다")
       .setTimestamp()
       message.channel.send(embed)
@@ -151,7 +171,7 @@ client.on("message", (message) => {
       .setURL("https://www.twitch.tv/geunzzi_")
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .setTitle("기타 을/를 선택하셨습니다.")
+      .addField("기타 을/를 선택하셨습니다.")
       .addField("기타정보", "게임은 좋아하지만 재능이\n0개 국어 입니다 한국말로 번역해주세요\n기분에 따라 달라지는 목소리 톤\n순두부 멘탈 (멘탈 나가면 방종..)")
       .setTimestamp()
       message.channel.send(embed)
@@ -233,12 +253,6 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (message.content == "!겜정보") {
-    let embed = new Discord.MessageEmbed()
-
-    .setTitle("겜정보")
-  }
-  
   else if (message.content == "!도움말") {
     let helpImg = "https://static-cdn.jtvnw.net/jtv_user_pictures/3ab02819-794f-436f-aed6-3f6d49062283-profile_image-70x70.png"
     let commandList = [
@@ -252,6 +266,7 @@ client.on("message", (message) => {
       { name: "욕설방지 기능(?)", desc: "현재 정상 작동중..욕하시마세요" },
       { name: "!노래1~5", desc: "제작자가 자주 듣는 노래를 보여줍니다."},
       { name: "!봇테스트서버", desc: "근찌봇의 새로운 기능을 테스트하기위한 서버입니다."},
+      { name: "!현재시간", desc: "현재 시간을 알려줘요"}
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("근찌 BOT", helpImg).setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
