@@ -105,7 +105,7 @@ client.on("message", (message) => {
       message.channel.send(embed)
   }
 
-  if (message.content == "") {
+  if (message.content == "!!!SDA@#XDQSDASDSCASDAASDASAXCASDZS") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let smimg = "https://cdn.discordapp.com/attachments/804191844560142356/811132351442452510/802d583a5185a46f.PNG"
     let embed = new Discord.MessageEmbed()
