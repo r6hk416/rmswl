@@ -186,6 +186,15 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
+  if (message.content == "!댄스") {
+    let img = "https://cdn.discordapp.com/attachments/808634098393677835/817594665133670410/video0.mp4"
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("ff8e8e")
+    .setImage(img)
+    message.channel.send(embed)
+
+  }
+
   if (message.content == "!봇테스트서버") {
     let embed = new Discord.MessageEmbed()
     .setTitle("근찌봇테스트서버")
