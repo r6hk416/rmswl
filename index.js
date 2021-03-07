@@ -187,10 +187,10 @@ client.on("message", (message) => {
   }
 
   if (message.content == "!댄스") {
-    let video = "https://cdn.discordapp.com/attachments/808634098393677835/817594665133670410/video0.mp4"
+    let img = "https://cdn.discordapp.com/attachments/808634098393677835/817594665133670410/video0.mp4"
     let embed = new Discord.MessageEmbed()
     embed.setColor("ff8e8e")
-    .type(video)
+    .addField("댄스타임~","개발중")
     message.channel.send(embed)
 
   }
@@ -205,7 +205,7 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐", "니거","ㅅㅂ","ㅅ1ㅂ","ㅆㅂ","ㅈㄲ","ㅈ1ㄲ","창녀","ㅂㅈ","ㅄ","ㅂㅅ"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
+  let blacklisted = ["시발", "욕설테스트", "시1발", "시이발", "병신", "병1신", "씨발", "씨1발", "씨이발", "느금", "느금마", "느1금", "느그음마", "좇", "좇까", "좇1까", "좆", "좆까", "좆1까", "조옷같네", "병진", "병1진", "닥쳐", "닥1쳐","ㅅㅂ","ㅅ1ㅂ","ㅆㅂ","ㅈㄲ","ㅈ1ㄲ","창녀","ㅂㅈ","ㅄ","ㅂㅅ"] //"감지할 욕설", "감지할 욕설2" 이런식으로 적어주심 됩니다
   let img = "https://cdn.discordapp.com/emojis/790597907899744266.png"
   
       let foundInText = false;
