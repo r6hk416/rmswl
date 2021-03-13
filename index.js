@@ -79,7 +79,7 @@ client.on("message", (message) => {
     .addField("업데이트 소식")
     .addField("신규 오퍼", "FLORES")
     .addField("더 알고싶다면 공식 사이트에서 알아보세요")
-    
+    message.channel.send(embed)
   }
 
   if (message.content == "!근찌정보") {
