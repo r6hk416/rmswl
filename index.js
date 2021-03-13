@@ -72,6 +72,16 @@ client.on("message", (message) => {
     return message.reply("https://youtu.be/ewCLsbNczjo?list=RDMM")
   }
 
+  if (message.content == "!레식") {
+    let embed = new Discord.MessageEmbed()
+    .setTitle("레식")
+    .setURL("https://www.ubisoft.com/ko-kr/game/rainbow-six/siege")
+    .addField("업데이트 소식")
+    .addField("신규 오퍼", "FLORES")
+    .addField("더 알고싶다면 공식 사이트에서 알아보세요")
+    
+  }
+
   if (message.content == "!근찌정보") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
