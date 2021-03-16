@@ -74,11 +74,13 @@ client.on("message", (message) => {
 
   if (message.content == "!레식") {
     let embed = new Discord.MessageEmbed()
+    let img = "https://cdn.discordapp.com/attachments/804191844560142356/821173719904419850/20fde449a2e34002.PNG"
     .setTitle("레식")
     .setURL("https://www.ubisoft.com/ko-kr/game/rainbow-six/siege")
-    .addField("업데이트 소식")
+    .addField("업데이트 소식", "다음시즌 소식")
     .addField("신규 오퍼", "FLORES")
-    .addField("더 알고싶다면 공식 사이트에서 알아보세요")
+    .addField("업데이트날짜", "PC기준으로 3월16일 22시에 업데이트가 있습니다 스팀은 업데이트후 10GB정도 다운하셔야 합니다")
+    .setImage(img)
     message.channel.send(embed)
   }
 
