@@ -22,7 +22,7 @@ client.on("message", (message) => {
   if (message.content == "근모닝") {
     return message.reply("근모닝~!")
   }
-  
+
 {
   if (message.content == "!탕수육게임") {
     let img = "https://th.bing.com/th/id/OIP.6kCfsexRlgnlXR9aZA-augHaEv?w=245&h=180&c=7&o=5&pid=1.7"
@@ -68,18 +68,6 @@ client.on("message", (message) => {
     return message.reply("https://youtu.be/ewCLsbNczjo?list=RDMM")
   }
 
-  if (message.content == "!레식") {
-    let embed = new Discord.MessageEmbed()
-    let img = "https://cdn.discordapp.com/attachments/804191844560142356/821173719904419850/20fde449a2e34002.PNG"
-    .setTitle("레식")
-    .setURL("https://www.ubisoft.com/ko-kr/game/rainbow-six/siege")
-    .addField("업데이트 소식", "다음시즌 소식")
-    .addField("신규 오퍼", "FLORES")
-    .addField("업데이트날짜", "PC기준으로 3월16일 22시에 업데이트가 있습니다 스팀은 업데이트후 10GB정도 다운하셔야 합니다")
-    .setImage(img)
-    message.channel.send(embed)
-  }
-
   if (message.content == "!근찌정보") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
@@ -110,21 +98,6 @@ client.on("message", (message) => {
       .setTitle("나이 을/를 선택하셨습니다.")
       .addField("'성인'입니다")
       .setTimestamp()
-      message.channel.send(embed)
-  }
-
-  if (message.content == "!!!SDA@#XDQSDASDSCASDAASDASAXCASDZS") {
-    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
-    let smimg = "https://cdn.discordapp.com/attachments/804191844560142356/811132351442452510/802d583a5185a46f.PNG"
-    let embed = new Discord.MessageEmbed()
-      embed.setColor("ff8e8e")
-      .setTitle("근찌정보")
-      .setURL("https://www.twitch.tv/geunzzi_")
-      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
-      .setThumbnail(img)
-      .addField("근찌님 현재 키는 바로 이문제를 풀면 알려드림", "문자 A , B, C, D , E가 하나씩 적혀 있는 5장의 카드와\n숫자 1 , 2 , 3 , 4가 하나씩 적혀 있는 4장의 카드가 있다.\n이 9장의 카드를 모두 한 번씩 사용하여 일렬로 임의로 나열할 때,\n문자 A 가 적혀 있는 카드의 바로 양옆에 각각 숫자가 적혀 있는\n카드가 놓일 확률은?")
-      .setImage(smimg)
-
       message.channel.send(embed)
   }
 
@@ -192,15 +165,6 @@ client.on("message", (message) => {
     .setTimestamp()
 
     message.channel.send(embed)
-  }
-
-  if (message.content == "!댄스") {
-    let img = "https://cdn.discordapp.com/attachments/808634098393677835/817594665133670410/video0.mp4"
-    let embed = new Discord.MessageEmbed()
-    embed.setColor("ff8e8e")
-    .addField("댄스타임~","개발중")
-    message.channel.send(embed)
-
   }
 
   if (message.content == "!봇테스트서버") {
