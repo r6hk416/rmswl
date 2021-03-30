@@ -22,11 +22,7 @@ client.on("message", (message) => {
   if (message.content == "근모닝") {
     return message.reply("근모닝~!")
   }
-
-  if (message.content == "깡패다!") {
-    return message.reply("https://cdn.discordapp.com/attachments/811624609383972864/812370063981936660/a1eec8b664e8a5272e8643dcbda8ba1e.jpg")
-  }
-
+  
 {
   if (message.content == "!탕수육게임") {
     let img = "https://th.bing.com/th/id/OIP.6kCfsexRlgnlXR9aZA-augHaEv?w=245&h=180&c=7&o=5&pid=1.7"
