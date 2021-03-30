@@ -254,57 +254,10 @@ client.on("message", (message) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
     })
 
-    embed.addField("커맨드: ", commandStr)
+    embed.addField("Commands: ", commandStr)
 
     message.channel.send(embed)
-  } else if (message.content == "!초대코드2") {
-    client.guilds.cache.array().forEach((x) => {
-      x.channels.cache
-        .find((x) => x.type == "text")
-        .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
-        .then((invite) => {
-          message.channel.send(invite.url)
-        })
-        .catch((err) => {
-          if (err.code == 50013) {
-            message.channel.send(`**${x.channels.cache.find((x) => x.type == "text").guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
-          }
-        })
-    })
-  } else if (message.content == "!초대코드") {
-    if (message.channel.type == "dm") {
-      return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
-    }
-    message.guild.channels.cache
-      .get(message.channel.id)
-      .createInvite({ maxAge: 0 }) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
-      .then((invite) => {
-        message.channel.send(invite.url)
-      })
-      .catch((err) => {
-        if (err.code == 50013) {
-          message.channel.send(`**${message.guild.channels.cache.get(message.channel.id).guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
-        }
-      })
-  } else if (message.content.startsWith("!전체공지2")) {
-    if (checkPermission(message)) return
-    if (message.member != null) {
-      // 채널에서 공지 쓸 때
-      let contents = message.content.slice("!전체공지2".length)
-      let embed = new Discord.MessageEmbed().setAuthor("공지 of 근찌 BOT").setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
-
-      embed.addField("공지: ", contents)
-
-      message.member.guild.members.cache.array().forEach((x) => {
-        if (x.user.bot) return
-        x.user.send(embed)
-      })
-
-      return message.reply("공지를 전송했습니다.")
-    } else {
-      return message.reply("채널에서 실행해주세요.")
-    }
-  } else if (message.content.startsWith("!전체공지")) {
+  }    else if (message.content.startsWith("!전체공지")) {
     if (checkPermission(message)) return
     if (message.member != null) {
       // 채널에서 공지 쓸 때
